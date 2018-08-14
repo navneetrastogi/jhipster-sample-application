@@ -5,6 +5,57 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104120_added_entity_Organization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104121_added_entity_Center.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104122_added_entity_Room.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104123_added_entity_Schedule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104124_added_entity_Event.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104125_added_entity_Activity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104126_added_entity_ActivityType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104127_added_entity_Photo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104128_added_entity_Video.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104129_added_entity_Student.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104130_added_entity_StudentProfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104131_added_entity_Teacher.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104132_added_entity_Holiday.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104133_added_entity_Kudos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104134_added_entity_Milestone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104135_added_entity_Incident.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104136_added_entity_Gallery.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104137_added_entity_Payment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104138_added_entity_ImmunizationRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104139_added_entity_IllnessRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104140_added_entity_Attendance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104141_added_entity_Parent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104142_added_entity_Permission.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104143_added_entity_Feature.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104144_added_entity_Notification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104145_added_entity_Task.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104146_added_entity_Conversation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104147_added_entity_Timeline.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20180814104121_added_entity_constraints_Center.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104122_added_entity_constraints_Room.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104124_added_entity_constraints_Event.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104125_added_entity_constraints_Activity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104127_added_entity_constraints_Photo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104128_added_entity_constraints_Video.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104129_added_entity_constraints_Student.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104131_added_entity_constraints_Teacher.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104132_added_entity_constraints_Holiday.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104133_added_entity_constraints_Kudos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104134_added_entity_constraints_Milestone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104135_added_entity_constraints_Incident.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104137_added_entity_constraints_Payment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104138_added_entity_constraints_ImmunizationRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104139_added_entity_constraints_IllnessRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104140_added_entity_constraints_Attendance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104141_added_entity_constraints_Parent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104142_added_entity_constraints_Permission.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104143_added_entity_constraints_Feature.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104144_added_entity_constraints_Notification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104145_added_entity_constraints_Task.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104146_added_entity_constraints_Conversation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180814104147_added_entity_constraints_Timeline.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
