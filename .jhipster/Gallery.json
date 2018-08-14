@@ -1,0 +1,15 @@
+{
+    "name": "Gallery",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20180814104136",
+    "entityTableName": "gallery",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "jhipsterSampleApplication"
+}

@@ -1,0 +1,52 @@
+{
+    "name": "Parent",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipName": "student",
+            "otherEntityName": "student",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "parent",
+            "otherEntityName": "feature",
+            "otherEntityRelationshipName": "parent"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "parent",
+            "otherEntityName": "notification",
+            "otherEntityRelationshipName": "parent"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "parent",
+            "otherEntityName": "task",
+            "otherEntityRelationshipName": "parent"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "parent",
+            "otherEntityName": "permission",
+            "otherEntityRelationshipName": "parent"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "parent",
+            "otherEntityName": "conversation",
+            "otherEntityRelationshipName": "parent"
+        }
+    ],
+    "changelogDate": "20180814104141",
+    "entityTableName": "parent",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "jhipsterSampleApplication"
+}

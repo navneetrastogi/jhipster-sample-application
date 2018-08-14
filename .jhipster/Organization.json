@@ -1,0 +1,27 @@
+{
+    "name": "Organization",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "org",
+            "otherEntityName": "center",
+            "otherEntityRelationshipName": "organization"
+        }
+    ],
+    "changelogDate": "20180814104120",
+    "entityTableName": "organization",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "jhipsterSampleApplication"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "Schedule",
+    "fields": [
+        {
+            "fieldName": "events",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "activities",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "schedule",
+            "otherEntityName": "room",
+            "otherEntityRelationshipName": "schedule"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "events",
+            "otherEntityName": "event",
+            "otherEntityRelationshipName": "schedule"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "activities",
+            "otherEntityName": "activity",
+            "otherEntityRelationshipName": "schedule"
+        }
+    ],
+    "changelogDate": "20180814104123",
+    "entityTableName": "schedule",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "jhipsterSampleApplication"
+}

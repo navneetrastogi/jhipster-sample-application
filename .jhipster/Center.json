@@ -1,0 +1,51 @@
+{
+    "name": "Center",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "organization",
+            "otherEntityName": "organization",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "center",
+            "otherEntityName": "room",
+            "otherEntityRelationshipName": "center"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "center",
+            "otherEntityName": "teacher",
+            "otherEntityRelationshipName": "center"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "center",
+            "otherEntityName": "student",
+            "otherEntityRelationshipName": "center"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "center",
+            "otherEntityName": "holiday",
+            "otherEntityRelationshipName": "center"
+        }
+    ],
+    "changelogDate": "20180814104121",
+    "entityTableName": "center",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "jhipsterSampleApplication"
+}
