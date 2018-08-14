@@ -1,0 +1,176 @@
+entity Organization {
+	id Long,
+    name String,
+    logoUrl String,
+    address String,
+    contactNumber String
+}
+
+entity Center {
+	id Long,
+    name String,
+    address String,
+    contactNumber String
+}
+
+
+entity Room {
+	id Long,
+    name String,
+    capacity Short
+}
+
+relationship OneToMany {
+	Organization{org} to Center
+    Center{center} to Room
+    Schedule{schedule} to Room
+    Center{center} to Teacher
+    Center{center} to Student
+    Center{center} to Holiday
+}
+entity Schedule {
+	id Long,
+    events Long,
+	activities Long,
+    scheduleDate DateTime
+    
+}
+
+entity Event {
+	id Long,
+	title String,
+	description String
+}
+
+entity Activity {
+	id Long,
+	title String,
+	description String,
+    activityType ActivityType
+}
+
+entity ActivityType {
+    id Long,
+    name String,
+    category String
+}
+entity Photo {
+	id Long,
+    activityId Long,
+    eventId Long,
+    date DateTime
+}
+
+
+entity Video {
+	startDate Instant,
+	endDate Instant,
+	language Language
+}
+relationship OneToMany {
+	Schedule{events} to Event
+    Schedule{activities} to Activity
+    Activity{id} to Photo
+	Event{id} to Photo
+	Activity{id} to Video
+	Event{id} to Video
+    
+    }
+    
+relationship OneToOne{
+Activity{activityId} to ActivityType
+}
+
+
+entity Student{
+id Long,
+name String
+}
+entity StudentProfile{
+id Long,
+dream String
+}
+relationship OneToOne{
+Student{id} to StudentProfile
+Student{id} to Gallery
+}
+relationship OneToMany{
+Student{student} to ImmunizationRecord
+Student{student} to IllnessRecord
+Student{student} to Payment
+Student{student} to Kudos
+Student{student} to Milestone
+Student{student} to Attendance
+Student{student} to Incident
+Student{student} to Timeline
+Student{student} to Parent
+
+}
+entity Teacher {
+id Long,
+name String
+}
+
+
+entity Holiday {
+id Long,
+date DateTime,
+title String,
+description String
+}
+
+entity Kudos{
+
+}
+entity Milestone{
+
+}
+
+entity Incident{
+
+}
+entity Gallery{
+
+}
+entity Payment{
+
+}
+entity ImmunizationRecord{
+
+}
+entity IllnessRecord{
+
+}
+entity Attendance{
+
+}
+entity Parent{
+
+}
+relationship OneToMany{
+Parent{parent} to Feature
+Parent{parent} to Notification
+Parent{parent} to Task
+Parent{parent} to Permission
+Parent{parent} to Conversation
+}
+entity Permission{
+
+}
+entity Feature{
+
+}
+entity Notification{
+
+}
+entity Task{
+
+}
+entity Conversation{
+
+}
+entity  Timeline {
+
+}
+
+
