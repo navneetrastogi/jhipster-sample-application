@@ -1,0 +1,174 @@
+entity Organization {
+	id Long,
+    name String    
+}
+
+entity Center {
+	id Long,
+    name String
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Organization{org} to Center
+    Center{center} to Room
+    Schedule{schedule} to Room
+    Center{center} to Teacher
+    Center{center} to Student
+    Center{center} to Holiday
+}
+// an ignored comment
+/** not an ignored comment */
+entity Room {
+	id Long,
+    name String,
+    capacity Long
+}
+
+entity Schedule {
+	id Long,
+    events Long,
+	activities Long
+}
+
+relationship OneToMany {
+	Schedule{events} to Event
+    Schedule{activities} to Activity
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Event {
+	id Long,
+	title String,
+	description String
+}
+
+entity Activity {
+	id Long,
+	title String,
+	description String,
+    activityType ActivityType
+}
+
+entity ActivityType {
+    id Long,
+    name String,
+    category String
+}
+entity Photo {
+	id Long,
+    activityId Long,
+    eventId Long,
+    date LocalDate
+}
+
+relationship OneToMany{
+Activity{id} to Photo
+Event{id} to Photo
+Activity{id} to Video
+Event{id} to Video
+}
+relationship OneToOne{
+Activity{activityId} to ActivityType
+}
+entity Video {
+	startDate Instant,
+	endDate Instant,
+	language Language
+}
+
+entity Student{
+id Long,
+name String
+}
+entity StudentProfile{
+id Long,
+dream String
+}
+relationship OneToOne{
+Student{id} to StudentProfile
+Student{id} to Gallery
+}
+relationship OneToMany{
+Student{student} to ImmunizationRecord
+Student{student} to IllnessRecord
+Student{student} to Payment
+Student{student} to Kudos
+Student{student} to Milestone
+Student{student} to Attendance
+Student{student} to Incident
+Student{student} to Timeline
+Student{student} to Parent
+
+}
+entity Teacher {
+id Long,
+name String
+}
+
+
+entity Holiday {
+id Long,
+date LocalDate,
+title String,
+description String
+}
+
+entity Kudos{
+id Long
+}
+entity Milestone{
+id Long
+}
+
+entity Incident{
+id Long
+}
+entity Gallery{
+id Long
+}
+entity Payment{
+id Long
+}
+entity ImmunizationRecord{
+id Long
+}
+entity IllnessRecord{
+id Long
+}
+entity Attendance{
+id Long
+}
+entity Parent{
+id Long
+}
+relationship OneToMany{
+Parent{parent} to Feature
+Parent{parent} to Notification
+Parent{parent} to Task
+Parent{parent} to Permission
+Parent{parent} to Conversation
+}
+entity Permission{
+id Long
+}
+entity Feature{
+id Long
+}
+entity Notification{
+id Long
+}
+entity Task{
+id Long
+}
+entity Conversation{
+id Long
+}
+entity  Timeline {
+id Long
+}
+
+
